@@ -8,6 +8,23 @@ body {
 
 
 
+/*
+display: flex; .................... (aplica a propriedade flex no container)
+flex-grow: ; ...................... (aumenta tamanho do elemento, deixando-o porporcionalmente MAIOR em comparação aos outros. Passando a preencher os espaços vazios)
+flex-shrink: ; .................... (reduz tamanho do elemento, deixando-o porporcionalmente MENOR em comparação aos outros)
+flex-basis: ; ..................... (da o tamanho inicial do elemento, e o resto é preenchido pelo "flex-grow" e "flex-shrink")
+flex: <grow> <shrink> <basis>; .... (SHORTHAND)
+flex-direction: ; ................. (muda a direção do elemento individualmente - <row> <column>)
+order: ; .......................... (muda a ordem do elemento individualmente)
+justify-content: ; ................ (alinha os elementos no eixo principal)
+align-items: ; .................... (alinha os elementos no eixo secundário)
+align-self: ; ..................... (alinha o elemento individualmente)
+*/
+
+
+
+
+
 --------------
 /* FLEX BOX */
 --------------
@@ -133,6 +150,48 @@ body {
 
 
 
+-------------------------------------
+/* FLEX BOX ( FLEX COM SHORTHAND ) */
+-------------------------------------
+
+/*
+body {
+    background-color: #ddd;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+.box {
+    height: 100px;
+    flex: 1 1 auto;
+    /* <grow> <shrink> <basis> */
+/*     
+}
+
+.first {
+    background-color: red;
+    flex: 2 1 auto;
+}
+
+.second {
+    background-color: green;
+}
+
+.third {
+    background-color: blue;
+}
+*/
+
+
+
+
+
+
+
 --------------------------------
 /* FLEX BOX ( FLEX-DIRECTION) */
 --------------------------------
@@ -175,7 +234,7 @@ body {
 
 
 -----------------------------
-/* FLEX BOX ( FLEX-ORDER ) */
+/* FLEX BOX ( ORDER ) */
 -----------------------------
 
 /*
@@ -208,47 +267,6 @@ body {
 .third {
     background-color: blue;
     order: 2;
-}
-*/
-
-
-
-
-
-
-
--------------------------------------
-/* FLEX BOX ( FLEX COM SHORTHAND ) */
--------------------------------------
-
-/*
-body {
-    background-color: #ddd;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    background-color: white;
-}
-
-.box {
-    height: 100px;
-    flex: 1 1 auto;
-    /* GROW / SHRINK / BASIS 
-}
-
-.first {
-    background-color: red;
-    flex: 2 1 auto;
-}
-
-.second {
-    background-color: green;
-}
-
-.third {
-    background-color: blue;
 }
 */
 
@@ -374,7 +392,7 @@ body {
 /* FLEX BOX ( ALIGN-SELF ) */
 -----------------------------
 
-
+/*                       (OK)
 body {
     background-color: #ddd;
 }
@@ -388,7 +406,7 @@ body {
     /* ( POSICIONAR ELEMENTOS NA HORIZONTAL) */
     /* justify-content: flex-start; */   /* POSIÇÃO PADRÃO INICIAL */
     /* justify-content: flex-end; */
-    justify-content: center;
+/*    justify-content: center;
     /* justify-content: space-between; */
     /* justify-content: space-around; */
     /* justify-content: space-evenly; */
@@ -398,15 +416,15 @@ body {
     /* ( POSICIONAR ELEMENTOS NA VERTICAL ) */
     /* align-items: normal; */  /* POSIÇÃO PADRÃO INICIAL */
     /* align-items: stretch; */  /* SÓ FUNCIONA SEM HEIGHT DEFINIDO */
-    align-items: center;
+/*    align-items: center;
     /* align-items: flex-start; */  /* POSIÇÃO PADRÃO INICIAL */
     /* align-items: flex-end; */
     /* align-items: start; */  /* POSIÇÃO PADRÃO INICIAL */
     /* align-items: end; */
     /* align-items: baseline; */
     /* align-items: initial; */
-    /* align-items: inherit; */
-    
+    /* align-items: inherit; */    
+/*
 }
 
 .box {
@@ -416,15 +434,25 @@ body {
 
 .first {
     background-color: red;
+    /* align-self: auto; */
+    /* align-self: stretch; */
+    /* align-self: center; */
+/*    align-self: flex-start;
+    /* align-self: flex-end; */
+    /* align-self: baseline; */
+    /* align-self: initial; */
+    /* align-self: inherit; */
+/*
 }
 
 .second {
     background-color: green;
+    align-self: flex-end;
 }
 
 .third {
     background-color: blue;
 }
-
+*/
 
 
