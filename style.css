@@ -9,16 +9,16 @@ body {
 
 
 /*
-display: flex; .................... (aplica a propriedade flex no container)
-flex-grow: ; ...................... (aumenta tamanho do elemento, deixando-o porporcionalmente MAIOR em comparação aos outros. Passando a preencher os espaços vazios)
-flex-shrink: ; .................... (reduz tamanho do elemento, deixando-o porporcionalmente MENOR em comparação aos outros)
-flex-basis: ; ..................... (da o tamanho inicial do elemento, e o resto é preenchido pelo "flex-grow" e "flex-shrink")
-flex: <grow> <shrink> <basis>; .... (SHORTHAND)
-flex-direction: ; ................. (muda a direção do elemento individualmente - <row> <column>)
-order: ; .......................... (muda a ordem do elemento individualmente)
-justify-content: ; ................ (alinha os elementos no eixo principal)
-align-items: ; .................... (alinha os elementos no eixo secundário)
-align-self: ; ..................... (alinha o elemento individualmente)
+display: flex; ...................... (aplica a propriedade flex no container)
+flex-grow: ; ........................ (aumenta tamanho do elemento, deixando-o porporcionalmente MAIOR em comparação aos outros. Passando a preencher os espaços vazios)
+flex-shrink: ; ...................... (reduz tamanho do elemento, deixando-o porporcionalmente MENOR em comparação aos outros)
+flex-basis: ; ....................... (da o tamanho inicial do elemento, e o resto é preenchido pelo "flex-grow" e/ou "flex-shrink")
+flex: <grow> <shrink> <basis>; ...... (SHORTHAND)
+flex-direction: ; ................... (muda a direção do elemento individualmente - <row> <column>)
+order: ; ............................ (muda a ordem do elemento individualmente)
+justify-content: ; .................. (alinha os elementos no eixo principal)
+align-items: ; ...................... (alinha os elementos no eixo secundário)
+align-self: ; ....................... (alinha o elemento individualmente)
 */
 
 
@@ -29,7 +29,7 @@ align-self: ; ..................... (alinha o elemento individualmente)
 /* FLEX BOX */
 --------------
 
-/* 
+/*
 body {
     background-color: #ddd;
 }
@@ -68,7 +68,7 @@ body {
 /* FLEX BOX ( FLEX-GROW ) */
 ----------------------------
 
-/* 
+/*
 body {
     background-color: #ddd;
 }
@@ -110,7 +110,7 @@ body {
 /* FLEX BOX ( FLEX-SHRINK E FLEX-BASIS ) OPOSTO DO FLEX-GROW */
 ---------------------------------------------------------------
 
-/* 
+/*
 body {
     background-color: #ddd;
 }
@@ -150,9 +150,9 @@ body {
 
 
 
--------------------------------------
-/* FLEX BOX ( FLEX COM SHORTHAND ) */
--------------------------------------
+--------------------------------------------------------------------
+/* FLEX BOX ( FLEX-GROW, FLEX-SHRINK E FLEX-BASIS COM SHORTHAND ) */
+--------------------------------------------------------------------
 
 /*
 body {
@@ -167,7 +167,7 @@ body {
 
 .box {
     height: 100px;
-    flex: 1 1 auto;
+    flex: 1 1 300px;
     /* <grow> <shrink> <basis> */
 /*     
 }
@@ -175,6 +175,8 @@ body {
 .first {
     background-color: red;
     flex: 2 1 auto;
+    /* <grow> <shrink> <basis> */
+/*
 }
 
 .second {
@@ -202,16 +204,24 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: row-reverse;
     width: 100%;
     background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: initial; */
+    /* flex-direction: inherit; */
+/*
 }
 
 .box {
-    height: 100px;
-    flex-grow: 1;
-    flex-basis: 300px;
+    width: 100px;  /* DELETAR SE FOR USAR O "FLEX-BASIS" */
+/*    height: 100px;
+    /* flex-grow: 1; */
+    /* flex-basis: 300px; */
+/*
 }
 
 .first {
@@ -233,9 +243,9 @@ body {
 
 
 
------------------------------
+------------------------
 /* FLEX BOX ( ORDER ) */
------------------------------
+------------------------
 
 /*
 body {
@@ -280,7 +290,7 @@ body {
 /* FLEX BOX ( JUSTIFY-CONTENT ) */
 ----------------------------------
 
-/*                            (OK)
+/*
 body {
     background-color: #ddd;
 }
@@ -329,7 +339,7 @@ body {
 /* FLEX BOX ( ALIGN-ITEMS ) */
 ------------------------------
 
-/*                        (OK)
+/*
 body {
     background-color: #ddd;
 }
@@ -392,7 +402,7 @@ body {
 /* FLEX BOX ( ALIGN-SELF ) */
 -----------------------------
 
-/*                       (OK)
+/*
 body {
     background-color: #ddd;
 }
